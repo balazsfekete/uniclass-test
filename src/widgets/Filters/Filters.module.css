@@ -1,0 +1,48 @@
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+  button {
+    cursor: pointer;
+    border-radius: 1rem;
+  }
+}
+
+.button {
+  appearance: none;
+  border: none;
+  /* border-bottom: 1px solid var(--text); */
+  background: none;
+  padding: 0.25rem 0.75rem;
+  font-size: inherit;
+  color: inherit;
+  user-select: none;
+  font-family: inherit;
+}
+
+.chips {
+  appearance: none;
+  border: 1px solid var(--text);
+  background: none;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 0.5rem;
+  padding: 0.25rem 0.75rem;
+
+  font-size: inherit;
+  color: var(--text);
+  user-select: none;
+  font-family: inherit;
+  /* font-weight: 300; */
+  /* transition: color 50ms, background-color 50ms; */
+}
+
+.chips :first-child {
+  font-weight: bold;
+}
+
+.chips:hover {
+  background-color: var(--text);
+  color: var(--background);
+}

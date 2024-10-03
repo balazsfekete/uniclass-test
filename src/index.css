@@ -1,0 +1,26 @@
+@import url(colors.css);
+
+:root {
+  background-color: var(--background);
+  color: var(--text);
+
+  font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+  font-size: 0.75rem;
+
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar) transparent;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+mark {
+  background-color: var(--highlight);
+  /* color: inherit; */
+}

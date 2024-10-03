@@ -1,0 +1,109 @@
+.node {
+  border-radius: 1rem;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  transition: padding 0.1s, margin 0.1s;
+}
+
+.nodeOpen {
+  border-color: var(--frame);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Header */
+
+.header {
+  display: grid;
+  grid-template-columns: 2rem 1fr auto;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  border: 1px solid transparent;
+  margin: -1px;
+}
+
+.headerHasChildren {
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.headerHasChildren:hover {
+  background-color: var(--background-accent);
+  /* color: var(--text-accent); */
+}
+
+/* Details */
+
+.details {
+  display: none;
+  grid-template-columns: 3rem auto;
+  animation: disappear 0.1s;
+  padding-right: 1rem;
+}
+
+.details.open {
+  display: grid;
+  animation: appear 0.1s;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    grid-template-rows: 0fr;
+  }
+  to {
+    opacity: 1;
+    grid-template-rows: 1fr;
+  }
+}
+
+@keyframes disappear {
+  from {
+    display: grid;
+    opacity: 1;
+    grid-template-rows: 1fr;
+  }
+  to {
+    display: none;
+    opacity: 0;
+    grid-template-rows: 0fr;
+  }
+}
+
+/* Brace line */
+
+.braceLine {
+  width: 100%;
+  cursor: pointer;
+}
+
+.braceLine::before {
+  content: '';
+  box-sizing: border-box;
+  width: 0;
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+  border-left: 1px solid var(--frame);
+}
+
+.braceLine:hover::before {
+  border-color: var(--frame-accent);
+}
+
+/* Children */
+
+.children {
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+/* .children:hover {
+  color: var(--text-faded);
+  border-color: var(--frame-faded);
+}
+
+.children:has(> .node > .header:hover) > .node > .header {
+  color: var(--text);
+} */

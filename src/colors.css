@@ -1,0 +1,27 @@
+:root {
+  color-scheme: light dark;
+
+  --background: hsl(215, 25%, 10%);
+  --foreground: hsl(0, 0%, 100%);
+  --highlight: hsl(200, 75%, 60%);
+
+  --text: color-mix(in oklab, var(--background), var(--foreground) 60%);
+  --text-accent: color-mix(in oklab, var(--background), var(--foreground) 100%);
+  --text-faded: color-mix(in oklab, var(--background), var(--text) 50%);
+
+  --frame: color-mix(in oklab, var(--background), var(--foreground) 20%);
+  --frame-accent: color-mix(in oklab, var(--background), var(--foreground) 75%);
+  --frame-faded: color-mix(in oklab, var(--background), var(--foreground) 33%);
+
+  --background-accent: color-mix(in oklab, transparent, var(--foreground) 5%);
+
+  --scrollbar: color-mix(in oklab, var(--background), var(--foreground) 25%);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: hsl(215, 0%, 90%);
+    --foreground: hsl(215, 25%, 5%);
+    --foreground: hsl(215, 100%, 10%);
+  }
+}
